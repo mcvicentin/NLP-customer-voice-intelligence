@@ -138,10 +138,6 @@ customer-voice-intelligence/
 │   │        ├── topic_model.py
 │   │        └── summarization_model.py
 │   │
-│   ├── api/
-│   │   ├── __init__.py
-│   │   └── main.py        # FastAPI app to serve models
-│   │
 │   ├── dashboards/
 │   │   ├── __init__.py
 │   │   └── streamlit_app.py
