@@ -129,12 +129,14 @@ customer-voice-intelligence/
 │   ├── models/
 │   │   ├── __init__.py
 |   |   └── sentiment/
+│   │   │    ├── __init__.py
 │   │   │    ├── sentiment_model.py
 │   │   │    ├── traditional_models.py
 │   │   │    └── bert_trainer.py
 |   |   └── topic/
-│   │       ├── topic_model.py
-│   │       └── summarization_model.py
+│   │        ├── __init__.py
+│   │        ├── topic_model.py
+│   │        └── summarization_model.py
 │   │
 │   ├── api/
 │   │   ├── __init__.py
