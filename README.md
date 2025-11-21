@@ -138,6 +138,10 @@ customer-voice-intelligence/
 │   │        ├── topic_model.py
 │   │        └── summarization_model.py
 │   │
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── main.py
+│   │
 │   ├── dashboards/
 │   │   ├── __init__.py
 │   │   └── streamlit_app.py
@@ -207,9 +211,9 @@ This project will be developed following the steps below:
 ## Status
 1) |v| Repository structure
 2) |v| Initial Documentation
-3) | | Add sample dataset
-4) | | Implement basic EDA notebook
-5) | | Implement first NLP preprocessing pipeline
+3) |v| Add sample dataset
+4) |v| Implement basic EDA notebook
+5) |v| Implement first NLP preprocessing pipeline
 6) | | Add Spark jobs and Databricks integration
 7) | | Expose models via API & dashboards
 
