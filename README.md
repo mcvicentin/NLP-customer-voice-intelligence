@@ -48,7 +48,7 @@ The **Customer Voice Intelligence** platform aims to:
 ```text
             ┌───────────────────────────────────────────┐
             │               Data Sources                 │
-            │  Amazon · App Store · Twitter · etc.      │
+            │                  Amazon                   │
             └─────────────────────┬─────────────────────┘
                                   │
                                   v
@@ -101,37 +101,40 @@ customer-voice-intelligence/
 ├── Makefile
 │
 ├── data/
-│   ├── raw/              # raw data sources (csv/json)
-│   ├── processed/        # cleaned / enriched datasets
-│   └── external/         # external resources (embeddings, stopwords lists, etc.)
+│   ├── raw/              # raw data sources 
+│   └── processed/        # cleaned / enriched datasets
+│   
 │
 ├── notebooks/
 │   ├── 01_eda_reviews.ipynb              # exploratory analysis of reviews
 │   ├── 02_spark_nlp_pipeline.ipynb       # Spark NLP pipeline prototypes
 │   ├── 03_sentiment_modeling.ipynb       # sentiment analysis experiments
-│   ├── 04_topic_modeling.ipynb           # topic modeling (LDA, BERTopic)
-│   └── 05_summarization_and_insights.ipynb
+│   └── 04_topic_modeling.ipynb           # topic modeling (LDA, BERTopic)   
 │
 ├── src/
 │   ├── __init__.py
 │   │
-│   ├── data_ingestion/
+│   ├── data_ingestion_cleaning/
 │   │   ├── __init__.py
 │   │   ├── fetch_amazon_reviews.py
-│   │   ├── fetch_twitter_data.py
-│   │   └── fetch_app_store_reviews.py
+|   |   └── text_cleaning.py
 │   │
 │   ├── spark_jobs/
 │   │   ├── __init__.py
 │   │   ├── clean_text_spark.py
 │   │   ├── nlp_pipeline_spark.py
-│   │   └── feature_engineering_spark.py
-│   │
+│   │   ├── feature_engineering_spark.py
+│   │   └── spark_session.py
+|   |
 │   ├── models/
 │   │   ├── __init__.py
-│   │   ├── sentiment_model.py
-│   │   ├── topic_model.py
-│   │   └── summarization_model.py
+|   |   └── sentiment/
+│   │   │    ├── sentiment_model.py
+│   │   │    ├── traditional_models.py
+│   │   │    └── bert_trainer.py
+|   |   └── topic/
+│   │       ├── topic_model.py
+│   │       └── summarization_model.py
 │   │
 │   ├── api/
 │   │   ├── __init__.py
